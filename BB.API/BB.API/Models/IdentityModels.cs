@@ -29,5 +29,7 @@ namespace BB.API.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BB.API.Models.Produto> Produtos { get; set; }
     }
 }
