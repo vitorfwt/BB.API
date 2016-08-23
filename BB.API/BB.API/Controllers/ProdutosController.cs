@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BB.API.Models;
+using System.Web.Http.Cors;
 
 namespace BB.API.Controllers
 {
+    [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
     public class ProdutosController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
